@@ -1,0 +1,50 @@
+# Language-specific ignores
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+vendor/bundle
+
+# Output files
+output/
+*.json
+!log*.json
+results/
+
+# Logs (keep sample logs)
+*.log
+!log.txt
+!log*.xml
+!log*.csv
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.pytest_cache/
