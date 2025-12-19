@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback } from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import type { Location } from '../data/sampleData';
 import { sampleData } from '../data/sampleData';
