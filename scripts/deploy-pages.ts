@@ -69,7 +69,7 @@ async function main() {
       console.log('      - Build output: dist');
       console.log('      - Root directory: front-end/map-search-app');
       console.log('   6. Add environment variable:');
-      console.log('      VITE_GOOGLE_MAPS_API_KEY=AIzaSyDm0IM8x2P9vzh3VkcYtv14DHHkGmz7nvY');
+      console.log('      VITE_GOOGLE_MAPS_API_KEY=<your-google-maps-api-key>');
       console.log('\n   Option 2: Direct Upload (requires wrangler)');
       console.log('   npm install -g wrangler');
       console.log('   cd front-end/map-search-app');
