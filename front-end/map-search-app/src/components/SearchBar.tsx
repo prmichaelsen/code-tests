@@ -3,11 +3,17 @@ import searchIcon from '../assets/icon-search.svg';
 import './SearchBar.css';
 
 interface SearchBarProps {
+  value?: string;
   onSearch: (query: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar: React.FC<SearchBarProps> = ({ value = '', onSearch }) => {
+  const [query, setQuery] = useState(value);
+
+  // Update local state when value prop changes
+  React.useEffect(() => {
+    setQuery(value);
+  }, [value]);
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {

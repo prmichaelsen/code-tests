@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import type { Location } from '../data/sampleData';
-import { sampleData } from '../data/sampleData';
+import pinIcon from '../assets/icon-pin.svg';
 
 const mapContainerStyle = {
   width: '100%',
@@ -23,9 +23,11 @@ const options = {
 
 interface MapProps {
   selectedLocation: Location | null;
+  searchResults: Location[];
+  onMarkerClick: (location: Location) => void;
 }
 
-const Map: React.FC<MapProps> = ({ selectedLocation }) => {
+const Map: React.FC<MapProps> = ({ selectedLocation, searchResults, onMarkerClick }) => {
   const [map, setMap] = useState<google.maps.Map | null>(null);
   
   const { isLoaded, loadError } = useLoadScript({
@@ -47,6 +49,13 @@ const Map: React.FC<MapProps> = ({ selectedLocation }) => {
     setMap(mapInstance);
   }, []);
 
+  const handleMarkerClick = useCallback(
+    (location: Location) => {
+      onMarkerClick(location);
+    },
+    [onMarkerClick]
+  );
+
   if (loadError) {
     return <div>Error loading maps</div>;
   }
@@ -54,6 +63,16 @@ const Map: React.FC<MapProps> = ({ selectedLocation }) => {
   if (!isLoaded) {
     return <div>Loading maps...</div>;
   }
+
+  // Only show markers for search results
+  const locationsToShow = searchResults.length > 0 ? searchResults : [];
+
+  // Custom marker icon
+  const markerIcon = {
+    url: pinIcon,
+    scaledSize: new google.maps.Size(32, 32),
+    anchor: new google.maps.Point(16, 32),
+  };
 
   return (
     <GoogleMap
@@ -63,7 +82,7 @@ const Map: React.FC<MapProps> = ({ selectedLocation }) => {
       options={options}
       onLoad={onLoad}
     >
-      {sampleData.map((location) => (
+      {locationsToShow.map((location) => (
         <Marker
           key={location.id}
           position={{
@@ -71,6 +90,8 @@ const Map: React.FC<MapProps> = ({ selectedLocation }) => {
             lng: location.location.lon,
           }}
           title={location.name}
+          onClick={() => handleMarkerClick(location)}
+          icon={markerIcon}
         />
       ))}
     </GoogleMap>
