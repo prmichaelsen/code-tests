@@ -783,7 +783,7 @@ git push origin main
 
 ```env
 # Google Maps
-VITE_GOOGLE_MAPS_API_KEY=AIzaSyDm0IM8x2P9vzh3VkcYtv14DHHkGmz7nvY
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 
 # Share API (same domain when using Pages Functions)
 VITE_SHARE_API_URL=/api

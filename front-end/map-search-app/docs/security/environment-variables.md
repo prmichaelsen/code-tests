@@ -3,7 +3,7 @@
 ## Current Environment Variables
 
 ```env
-VITE_GOOGLE_MAPS_API_KEY=AIzaSyDm0IM8x2P9vzh3VkcYtv14DHHkGmz7nvY
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 VITE_API_BASE_URL=http://localhost:3001
 VITE_SERVER_HOST=137.184.37.88
 VITE_SERVER_PORT=5173
@@ -111,7 +111,7 @@ SECRET_KEY=abc123
 const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 // Becomes (in built code):
-const apiKey = "AIzaSyDm0IM8x2P9vzh3VkcYtv14DHHkGmz7nvY";
+const apiKey = "your_google_maps_api_key_here";
 ```
 
 **This means:**
