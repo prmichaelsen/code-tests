@@ -12,14 +12,15 @@ A reusable, accessible, and type-safe modal system using React Context for state
 App
 └── ModalProvider (Context)
     ├── Your App Components
-    └── ModalPortal (renders at document.body)
-        └── Modal (when open)
-            ├── Backdrop
-            └── ModalContent
-                ├── Header
-                ├── Body
-                └── Footer
+    └── Modal (when open)
+        ├── Backdrop
+        └── ModalContent
+            ├── Header
+            ├── Body
+            └── Footer
 ```
+
+**Note:** No portal needed - simple fixed positioning with high z-index is sufficient for this app.
 
 ---
 
@@ -134,7 +135,6 @@ export const useModal = (): ModalContextType => {
 
 ```typescript
 import React, { useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
 import { useModal } from '../../contexts/ModalContext';
 import './Modal.css';
 
@@ -233,7 +233,8 @@ const Modal: React.FC = () => {
     full: 'modal-full',
   };
 
-  return createPortal(
+  // ✅ Simple rendering - no portal needed
+  return (
     <div
       className="modal-backdrop"
       onClick={handleBackdropClick}
@@ -286,8 +287,7 @@ const Modal: React.FC = () => {
         {/* Footer */}
         {config.footer && <div className="modal-footer">{config.footer}</div>}
       </div>
-    </div>,
-    document.body
+    </div>
   );
 };
 
@@ -895,7 +895,7 @@ describe('Modal', () => {
 - IntelliSense support
 
 ### ✅ Performance
-- Portal rendering (outside React tree)
+- Simple fixed positioning (no portal overhead)
 - Minimal re-renders
 - Lazy loading support
 
@@ -920,10 +920,10 @@ This modal system provides:
 - **Modal component** for rendering with full accessibility
 - **Type-safe API** with TypeScript
 - **Flexible configuration** for various use cases
-- **Portal rendering** for proper z-index handling
+- **Simple fixed positioning** with high z-index (no portal needed)
 - **Focus management** for accessibility
 - **Keyboard support** (Escape, Tab trap)
 - **Responsive design** with multiple sizes
 - **Easy integration** with existing app
 
-The design is production-ready and follows React best practices for context, portals, and accessibility.
+The design is production-ready and follows React best practices for context and accessibility.

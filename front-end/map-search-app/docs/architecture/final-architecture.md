@@ -238,6 +238,35 @@ export const ShareProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [shareUrl, setShareUrl] = useState<string>('');
   const [isSharing, setIsSharing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // ✅ Load shared link on mount (if URL matches /shared/:id)
+  useEffect(() => {
+    const loadSharedLinkFromUrl = async () => {
+      const path = window.location.pathname;
+      const match = path.match(/^\/shared\/([a-z0-9]+)$/);
+      
+      if (match && user) {
+        const shareId = match[1];
+        setError(null);
+        
+        try {
+          const data = await shareService.getSharedList(shareId);
+          
+          // Star these locations for the current user
+          await starService.starMultiple(user.id, data.locationIds);
+          
+          // Optional: Show success notification
+          console.log(`Loaded ${data.locationIds.length} shared locations`);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : 'Failed to load shared list';
+          setError(message);
+          console.error('Failed to load shared list:', err);
+        }
+      }
+    };
+
+    loadSharedLinkFromUrl();
+  }, [user]); // Run when user is initialized
+
 
   const createShare = useCallback(async (locationIds: number[]) => {
     if (!user) {
