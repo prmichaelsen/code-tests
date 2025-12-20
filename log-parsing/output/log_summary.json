@@ -1,0 +1,91 @@
+{
+  "total_entries": 166,
+  "entries_by_severity": {
+    "INFO": 69,
+    "WARN": 41,
+    "ERROR": 56
+  },
+  "top_3_error_messages": [
+    {
+      "message": "Failed to connect to the database.",
+      "count": 18
+    },
+    {
+      "message": "Failed to write to disk.",
+      "count": 18
+    },
+    {
+      "message": "Failed to write to file.",
+      "count": 10
+    }
+  ],
+  "errors_by_hour": [
+    {
+      "hour": 0,
+      "count": 3
+    },
+    {
+      "hour": 1,
+      "count": 1
+    },
+    {
+      "hour": 2,
+      "count": 1
+    },
+    {
+      "hour": 12,
+      "count": 4
+    },
+    {
+      "hour": 13,
+      "count": 6
+    },
+    {
+      "hour": 14,
+      "count": 4
+    },
+    {
+      "hour": 15,
+      "count": 6
+    },
+    {
+      "hour": 16,
+      "count": 6
+    },
+    {
+      "hour": 17,
+      "count": 4
+    },
+    {
+      "hour": 18,
+      "count": 4
+    },
+    {
+      "hour": 19,
+      "count": 3
+    },
+    {
+      "hour": 20,
+      "count": 4
+    },
+    {
+      "hour": 21,
+      "count": 4
+    },
+    {
+      "hour": 22,
+      "count": 2
+    },
+    {
+      "hour": 23,
+      "count": 4
+    }
+  ],
+  "analysis_metadata": {
+    "total_error_count": 56,
+    "total_warn_count": 41,
+    "total_info_count": 69,
+    "unique_error_messages": 4,
+    "hours_with_errors": 15
+  }
+}

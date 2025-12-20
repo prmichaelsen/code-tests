@@ -18,10 +18,10 @@ package-lock.json
 .bundle/
 vendor/bundle
 
-# Output files
-output/
+# Output files (keep output/ for take-home assignment)
 *.json
 !log*.json
+!output/*.json
 results/
 
 # Logs (keep sample logs)
