@@ -1,0 +1,38 @@
+======================================================================
+INVENTORY RECONCILIATION SUMMARY
+======================================================================
+
+Reconciliation Date: 2025-12-20T00:43:08.776833
+
+SNAPSHOT COMPARISON:
+  Snapshot 1 Total Items: 75
+  Snapshot 2 Total Items: 78
+
+CHANGES DETECTED:
+  Items Added:     5
+  Items Removed:   2
+  Items Modified:  71
+  Items Unchanged: 2
+
+DATA QUALITY ISSUES: 10
+
+======================================================================
+DATA QUALITY ISSUES DETAIL
+======================================================================
+
+HIGH SEVERITY (2):
+  - [negative_quantity] Negative quantity -5.0 for SKU 'SKU-045'
+  - [duplicate_sku] Duplicate SKU 'SKU-045' found in row 54
+
+MEDIUM SEVERITY (3):
+  - [sku_format_inconsistency] SKU format inconsistency: 'SKU005' normalized to 'SKU-005'
+  - [sku_format_inconsistency] SKU format inconsistency: 'sku-008' normalized to 'SKU-008'
+  - [sku_format_inconsistency] SKU format inconsistency: 'SKU018' normalized to 'SKU-018'
+
+LOW SEVERITY (5):
+  - [whitespace_in_name] Leading/trailing whitespace in name: 'Cable Ties 100pk '
+  - [whitespace_in_name] Leading/trailing whitespace in name: ' Compressed Air Can'
+  - [whitespace_in_name] Leading/trailing whitespace in name: ' Widget B'
+  - [whitespace_in_name] Leading/trailing whitespace in name: 'Mounting Bracket Large '
+  - [whitespace_in_name] Leading/trailing whitespace in name: ' HDMI Cable 3ft '
+

@@ -49,11 +49,13 @@ coverage.xml
 .env
 .env.local
 
-# Output files
-output/
+# Output files (keep output/ for take-home assignment)
 *.csv
 *.json
 !data/*.csv
+!output/*.csv
+!output/*.json
+!output/*.txt
 
 # IDE
 .vscode/

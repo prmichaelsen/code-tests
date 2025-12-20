@@ -1,0 +1,81 @@
+sku,name,change_type,old_quantity,new_quantity,quantity_difference,old_location,new_location
+SKU-001,Widget A,modified,150.0,145.0,-5.0,Warehouse A,Warehouse A
+SKU-002,Widget B,modified,75.0,70.0,-5.0,Warehouse A,Warehouse A
+SKU-003,Gadget Pro,modified,200.0,185.0,-15.0,Warehouse B,Warehouse B
+SKU-004,Gadget Lite,modified,50.0,48.0,-2.0,Warehouse A,Warehouse A
+SKU-005,Connector Cable 6ft,modified,500.0,480.0,-20.0,Warehouse C,Warehouse C
+SKU-006,Connector Cable 10ft,unchanged,350.0,350.0,0.0,Warehouse C,Warehouse C
+SKU-007,Power Supply Unit,unchanged,80.0,80.0,0.0,Warehouse A,Warehouse A
+SKU-008,Power Supply Unit Pro,modified,45.0,42.0,-3.0,Warehouse A,Warehouse A
+SKU-009,Mounting Bracket Small,modified,1000.0,975.0,-25.0,Warehouse B,Warehouse B
+SKU-010,Mounting Bracket Large,modified,750.0,720.0,-30.0,Warehouse B,Warehouse B
+SKU-011,LED Panel 12x12,modified,120.0,115.0,-5.0,Warehouse A,Warehouse A
+SKU-012,LED Panel 24x24,modified,90.0,85.0,-5.0,Warehouse A,Warehouse A
+SKU-013,Thermal Paste Tube,modified,2000.0,1850.0,-150.0,Warehouse C,Warehouse C
+SKU-014,Cooling Fan 80mm,modified,300.0,290.0,-10.0,Warehouse B,Warehouse B
+SKU-015,Cooling Fan 120mm,modified,250.0,245.0,-5.0,Warehouse B,Warehouse B
+SKU-016,USB Hub 4-Port,modified,180.0,165.0,-15.0,Warehouse A,Warehouse A
+SKU-017,USB Hub 7-Port,modified,95.0,88.0,-7.0,Warehouse A,Warehouse A
+SKU-018,Ethernet Cable Cat5,modified,800.0,750.0,-50.0,Warehouse C,Warehouse C
+SKU-019,Ethernet Cable Cat6,modified,600.0,580.0,-20.0,Warehouse C,Warehouse C
+SKU-020,Ethernet Cable Cat6a,modified,400.0,390.0,-10.0,Warehouse C,Warehouse C
+SKU-021,HDMI Cable 3ft,modified,450.0,425.0,-25.0,Warehouse A,Warehouse A
+SKU-022,HDMI Cable 6ft,modified,380.0,365.0,-15.0,Warehouse A,Warehouse A
+SKU-023,HDMI Cable 10ft,modified,220.0,210.0,-10.0,Warehouse A,Warehouse A
+SKU-024,DisplayPort Cable,modified,175.0,170.0,-5.0,Warehouse A,Warehouse A
+SKU-025,VGA Cable,removed,50.0,0,-50.0,Warehouse B,
+SKU-026,DVI Cable,removed,35.0,0,-35.0,Warehouse B,
+SKU-027,Audio Cable 3.5mm,modified,600.0,575.0,-25.0,Warehouse C,Warehouse C
+SKU-028,Audio Cable RCA,modified,400.0,385.0,-15.0,Warehouse C,Warehouse C
+SKU-029,Optical Audio Cable,modified,150.0,145.0,-5.0,Warehouse C,Warehouse C
+SKU-030,Surge Protector 6-Outlet,modified,200.0,188.0,-12.0,Warehouse A,Warehouse A
+SKU-031,Surge Protector 12-Outlet,modified,120.0,112.0,-8.0,Warehouse A,Warehouse A
+SKU-032,Extension Cord 10ft,modified,300.0,285.0,-15.0,Warehouse B,Warehouse B
+SKU-033,Extension Cord 25ft,modified,180.0,172.0,-8.0,Warehouse B,Warehouse B
+SKU-034,Power Strip,modified,250.0,240.0,-10.0,Warehouse A,Warehouse A
+SKU-035,Cable Ties 100pk,modified,1500.0,1420.0,-80.0,Warehouse C,Warehouse C
+SKU-036,Cable Ties 500pk,modified,400.0,385.0,-15.0,Warehouse C,Warehouse C
+SKU-037,Velcro Straps 50pk,modified,800.0,765.0,-35.0,Warehouse C,Warehouse C
+SKU-038,Label Maker,modified,25.0,22.0,-3.0,Warehouse A,Warehouse A
+SKU-039,Label Tape,modified,200.0,185.0,-15.0,Warehouse A,Warehouse A
+SKU-040,Screwdriver Set,modified,150.0,142.0,-8.0,Warehouse B,Warehouse B
+SKU-041,Precision Screwdriver Set,modified,100.0,95.0,-5.0,Warehouse B,Warehouse B
+SKU-042,Wire Stripper,modified,75.0,70.0,-5.0,Warehouse B,Warehouse B
+SKU-043,Crimping Tool,modified,60.0,58.0,-2.0,Warehouse B,Warehouse B
+SKU-044,Multimeter Basic,modified,40.0,35.0,-5.0,Warehouse A,Warehouse A
+SKU-045,Multimeter Pro,modified,25.0,-5.0,-30.0,Warehouse A,Warehouse B
+SKU-046,Soldering Iron,modified,35.0,32.0,-3.0,Warehouse B,Warehouse B
+SKU-047,Solder Wire,modified,300.0,280.0,-20.0,Warehouse B,Warehouse B
+SKU-048,Heat Shrink Tubing,modified,500.0,475.0,-25.0,Warehouse C,Warehouse C
+SKU-049,Electrical Tape,modified,800.0,760.0,-40.0,Warehouse C,Warehouse C
+SKU-050,Anti-Static Wrist Strap,modified,200.0,190.0,-10.0,Warehouse A,Warehouse A
+SKU-051,Anti-Static Mat,modified,50.0,48.0,-2.0,Warehouse A,Warehouse A
+SKU-052,Compressed Air Can,modified,400.0,375.0,-25.0,Warehouse C,Warehouse C
+SKU-053,Isopropyl Alcohol 99%,modified,150.0,140.0,-10.0,Warehouse C,Warehouse C
+SKU-054,Microfiber Cloth 10pk,modified,300.0,285.0,-15.0,Warehouse C,Warehouse C
+SKU-055,Screen Cleaner,modified,250.0,235.0,-15.0,Warehouse C,Warehouse C
+SKU-056,Keyboard Cleaner Gel,modified,180.0,168.0,-12.0,Warehouse C,Warehouse C
+SKU-057,Monitor Stand,modified,45.0,42.0,-3.0,Warehouse A,Warehouse A
+SKU-058,Laptop Stand,modified,60.0,58.0,-2.0,Warehouse A,Warehouse A
+SKU-059,Tablet Stand,modified,80.0,75.0,-5.0,Warehouse A,Warehouse A
+SKU-060,Phone Stand,modified,120.0,115.0,-5.0,Warehouse A,Warehouse A
+SKU-061,Desk Organizer,modified,90.0,85.0,-5.0,Warehouse B,Warehouse B
+SKU-062,Cable Management Box,modified,110.0,105.0,-5.0,Warehouse B,Warehouse B
+SKU-063,Headphone Hook,modified,200.0,192.0,-8.0,Warehouse B,Warehouse B
+SKU-064,Webcam Mount,modified,75.0,72.0,-3.0,Warehouse A,Warehouse A
+SKU-065,Ring Light 10in,modified,40.0,38.0,-2.0,Warehouse A,Warehouse A
+SKU-066,Ring Light 18in,modified,25.0,22.0,-3.0,Warehouse A,Warehouse A
+SKU-067,Tripod Small,modified,55.0,52.0,-3.0,Warehouse B,Warehouse B
+SKU-068,Tripod Large,modified,35.0,33.0,-2.0,Warehouse B,Warehouse B
+SKU-069,Green Screen,modified,20.0,18.0,-2.0,Warehouse A,Warehouse A
+SKU-070,Backdrop Stand,modified,15.0,12.0,-3.0,Warehouse A,Warehouse A
+SKU-071,USB Microphone,modified,30.0,28.0,-2.0,Warehouse A,Warehouse A
+SKU-072,XLR Microphone,modified,20.0,18.0,-2.0,Warehouse A,Warehouse A
+SKU-073,Pop Filter,modified,100.0,95.0,-5.0,Warehouse B,Warehouse B
+SKU-074,Boom Arm,modified,45.0,42.0,-3.0,Warehouse B,Warehouse B
+SKU-075,Shock Mount,modified,40.0,38.0,-2.0,Warehouse B,Warehouse B
+SKU-076,Stream Deck Mini,added,0,15.0,15.0,,Warehouse A
+SKU-077,Stream Deck XL,added,0,8.0,8.0,,Warehouse A
+SKU-078,Capture Card,added,0,12.0,12.0,,Warehouse A
+SKU-079,USB-C Hub,added,0,45.0,45.0,,Warehouse A
+SKU-080,Thunderbolt Cable,added,0,30.0,30.0,,Warehouse A
