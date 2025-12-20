@@ -1,38 +1,26 @@
-.star-button {
+.star-icon-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  color: #d1d5db;
+  transition: all 0.2s;
+  line-height: 1;
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: white;
-  border: 2px solid #e5e7eb;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  color: #374151;
+  justify-content: center;
 }
 
-.star-button:hover {
-  border-color: #fbbf24;
-  background: #fffbeb;
+.star-icon-button:hover {
+  color: #fbbf24;
+  transform: scale(1.1);
 }
 
-.star-button.starred {
-  border-color: #fbbf24;
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.star-icon {
-  font-size: 18px;
+.star-icon-button.starred {
   color: #fbbf24;
 }
 
-.star-button.starred .star-icon {
+.star-icon-button.starred:hover {
   color: #f59e0b;
-}
-
-.star-text {
-  font-weight: 500;
 }

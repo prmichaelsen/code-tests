@@ -84,9 +84,15 @@
   margin: 0;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .visit-website-link {
   text-decoration: none;
-  flex-shrink: 0;
 }
 
 .close-button {

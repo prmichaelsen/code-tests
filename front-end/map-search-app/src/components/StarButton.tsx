@@ -18,7 +18,6 @@ const StarButton: React.FC<StarButtonProps> = ({ locationId }) => {
         await toggleStar(locationId);
       } catch (error) {
         console.error('Failed to toggle star:', error);
-        alert('Failed to update favorite status');
       }
     },
     [locationId, toggleStar]
@@ -27,12 +26,11 @@ const StarButton: React.FC<StarButtonProps> = ({ locationId }) => {
   return (
     <button
       onClick={handleClick}
-      className={`star-button ${starred ? 'starred' : ''}`}
+      className={`star-icon-button ${starred ? 'starred' : ''}`}
       aria-label={starred ? 'Remove from favorites' : 'Add to favorites'}
       title={starred ? 'Remove from favorites' : 'Add to favorites'}
     >
-      <span className="star-icon">{starred ? '★' : '☆'}</span>
-      <span className="star-text">{starred ? 'Starred' : 'Star'}</span>
+      {starred ? '★' : '☆'}
     </button>
   );
 };

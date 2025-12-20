@@ -57,18 +57,17 @@ const LocationModal: React.FC<LocationModalProps> = ({ location, onClose }) => {
               </p>
             </div>
           </div>
-          {location.details?.website && (
-            <a href={location.details.website} target="_blank" rel="noopener noreferrer" className="visit-website-link">
-              <button className="visit-website-button">Visit Website</button>
-            </a>
-          )}
+          <div className="header-actions">
+            <StarButton locationId={location.id} />
+            {location.details?.website && (
+              <a href={location.details.website} target="_blank" rel="noopener noreferrer" className="visit-website-link">
+                <button className="visit-website-button">Visit Website</button>
+              </a>
+            )}
+          </div>
         </div>
 
         <div className="modal-body">
-          <div className="modal-actions">
-            <StarButton locationId={location.id} />
-          </div>
-
           {location.details?.description && (
             <p className="description">{location.details.description}</p>
           )}
