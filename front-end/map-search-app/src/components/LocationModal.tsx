@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import type { Location } from '../data/sampleData';
 import pinIcon from '../assets/icon-pin.svg';
+import StarButton from './StarButton';
 import './LocationModal.css';
 
 interface LocationModalProps {
@@ -64,6 +65,10 @@ const LocationModal: React.FC<LocationModalProps> = ({ location, onClose }) => {
         </div>
 
         <div className="modal-body">
+          <div className="modal-actions">
+            <StarButton locationId={location.id} />
+          </div>
+
           {location.details?.description && (
             <p className="description">{location.details.description}</p>
           )}

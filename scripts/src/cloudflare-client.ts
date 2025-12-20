@@ -110,10 +110,17 @@ export class CloudflareClient {
     data?: any,
     options?: FetchOptions
   ): Promise<T> {
+    // If data is a string, assume it's raw content (like Worker script)
+    const isRawContent = typeof data === 'string';
+    
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: isRawContent ? data : (data ? JSON.stringify(data) : undefined),
+      headers: {
+        ...options?.headers,
+        'Content-Type': isRawContent ? 'application/javascript' : 'application/json',
+      },
     });
   }
 
