@@ -21,6 +21,33 @@ end
 class SimpleMessageQueue
   include MessageQueue
 
+  def initialize
+    @subscribers = Hash.new { |hash, key| hash[key] = [] }
+  end
+
+  # Subscribe to one or more message types
+  # Accepts either a single type (string) or array of types
+  def subscribe(*types, &block)
+    types = types.flatten
+    types.each do |type|
+      @subscribers[type] << block
+    end
+  end
+
+  # Publish a message to all subscribers of that type
+  # Handles exceptions in individual subscribers gracefully
+  def publish(type, data = nil)
+    return unless @subscribers[type]
+    
+    @subscribers[type].each do |subscriber|
+      begin
+        subscriber.call(data)
+      rescue => e
+        # Silently catch exceptions so other subscribers can continue
+        # In production, you might want to log this
+      end
+    end
+  end
 end
 
 # Extra credit!!! check out map_reduce.rb...
